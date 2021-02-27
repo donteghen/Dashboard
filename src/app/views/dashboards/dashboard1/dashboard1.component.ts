@@ -18,12 +18,12 @@ export class Dashboard1Component implements OnInit {
   public chartType = 'line';
 
   public chartDatasets: Array<any> = [
-    {data: [50, 40, 60, 51, 56, 55, 40], label: '#1'},
-    {data: [28, 80, 40, 69, 36, 37, 110], label: '#2'},
-    {data: [38, 58, 30, 90, 45, 65, 30], label: '#3'}
+    {data: [50, 40, 60, 51, 56, 55, 40], label: 'Vulnarable'},
+    {data: [28, 80, 40, 69, 36, 37, 110], label: 'Safe'},
+    {data: [38, 58, 30, 90, 45, 65, 30], label: 'Curently Test'}
   ];
 
-  public chartLabels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
+  public chartLabels: Array<any> = ['2015', '2016', '2017', '2018', '2019', '2020', '2021'];
 
   public chartColors:Array<any> = [
 

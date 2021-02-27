@@ -18,6 +18,8 @@ import { StatsCard2Component } from './dashboards/common/stats-card2/stats-card2
 import { Dashboard1Component } from './dashboards/dashboard1/dashboard1.component';
 import { Profile1Component } from './profile/profile1/profile1.component';
 import { HelpComponent } from './help/help.component';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { HelpComponent } from './help/help.component';
     Dashboard1Component,
     Profile1Component,
     HelpComponent,
+    ProfileDetailComponent,
+   
 
   ],
   exports: [
@@ -53,7 +57,8 @@ import { HelpComponent } from './help/help.component';
     Map1Component,
     StatsCardComponent,
     StatsCard2Component,    
-    Dashboard1Component
+    Dashboard1Component,
+    ProfileDetailComponent
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

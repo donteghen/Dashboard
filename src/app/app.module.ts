@@ -20,6 +20,8 @@ import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.co
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
 import { CommonModule } from '@angular/common';
+import { ProfileDetailComponent } from './views/profile-detail/profile-detail.component';
+
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
@@ -30,7 +32,8 @@ const routes: Route[] = [
   },
   { path: 'profiles', children:
     [
-      { path: 'profile1', component: Profile1Component },
+      { path: 'profile1', pathMatch:'full', component: Profile1Component },
+      { path: 'profile1/:id', component: ProfileDetailComponent}
     ]
   },
   { path: 'tables', children:

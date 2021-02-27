@@ -1,0 +1,240 @@
+
+<section class="mt-lg-5">
+    <div class="col-xl-12 col-md-6 mb-r mt-2 py-4 ">
+        <!--Card Primary-->
+        <mdb-card bgColor="primary-color" class="classic-admin-card shadow-5-strong">
+            <mdb-card-body>
+                <h3>{{project.name}}</h3>
+                <div><span>{{project.description}}</span></div>
+            </mdb-card-body>
+        </mdb-card>
+    </div>
+    <!--Grid row-->
+    <div class="row py-2 ">
+        <!--Grid column-->
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card bgColor="secondary-color" class="classic-admin-card shadow-5-strong">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Number of Applications</p>
+                    <h4>
+                        <strong>{{project.number_of_applications}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[0] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card bgColor="primary-color" class="classic-admin-card shadow-5-strong">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Critical Violations</p>
+                    <h4>
+                        <strong>{{project.critical_violations}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[1] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card  class="classic-admin-card shadow-5-strong bg-info">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Robustness Index</p>
+                    <h4>
+                        <strong>{{project.robustness_index}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[2] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card  class="classic-admin-card shadow-5-strong bg-light">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Security Index</p>
+                    <h4>
+                        <strong>{{project.security_index}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[3] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card bgColor="success-color" class="classic-admin-card shadow-5-strong">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Changeability Index</p>
+                    <h4>
+                        <strong>{{project.changeability_index}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[4] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card bgColor="danger-color" class="classic-admin-card shadow-5-strong">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Transferability Index</p>
+                    <h4>
+                        <strong>{{project.transferability_index}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[5] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card bgColor="warning-color" class="classic-admin-card shadow-5-strong">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Technical Size</p>
+                    <h4>
+                        <strong>{{project.technical_size}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[2] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+
+        <div class="col-xl-4 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card  class="classic-admin-card shadow-5-strong bg-dark">
+                <mdb-card-body>
+                    <div class="pull-right">
+                        <mdb-icon fas icon="shield-alt"></mdb-icon>
+                    </div>
+                    <p class="white-text">Efficiency Index</p>
+                    <h4>
+                        <strong>{{project.efficiency_index}}</strong>
+                    </h4>
+                </mdb-card-body>
+                <div class="progress">
+                    <div class="progress-bar bg grey darken-3" [ngStyle]="{'width': value[0] + '%'}" role="progressbar"  aria-valuenow="21.5"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card-body">
+                    <p>Analyzer's Passed result</p>
+                </div>
+            </mdb-card>
+        </div>
+
+        
+        <div class="col-xl-12 col-md-6 mb-r my-2">
+            <!--Card Primary-->
+            <mdb-card  class="classic-admin-card shadow-5-strong ">
+                <mdb-card-body>
+                    <h3 class="mt-5 text-left"><strong>Autom8 Prime</strong></h3>
+                <p>Top 4 Critical Validation Rules and Current stats</p>
+
+
+                <table mdbTable hover="true" striped = 'true'>
+                    <tr class="bg-dark text-white ">
+                        <td class="col-6">Rules</td>
+                        <td class="col-3">Checked</td>
+                        <td class="col-3">Failed <mdb-icon fas icon="exclamation"></mdb-icon></td>
+                    </tr>
+                    
+                    <tr>
+                       
+                        <td class="col-6">Infiltration Prevention mechanism</td>
+                        <td class="col-3">15,222000</td>
+                        <td class="col-3 bg-danger">12,122,200</td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="col-6">Code Access and retreival points Prevention</td>
+                        <td class="col-3">14,000,000</td>
+                        <td class="col-3 bg-danger">11,000,482</td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="col-6">Hazardeous inside loops</td>
+                        <td class="col-3">19,000,00</td>
+                        <td class="col-3 bg-danger">14,304,40</td>
+                    </tr>
+
+                    <tr>
+                        
+                        <td class="col-6">Application state management system check</td>
+                        <td class="col-3">524,000,00</td>
+                        <td class="col-3 bg-danger">421,304,40</td>
+                    </tr>
+                    
+                </table>
+                </mdb-card-body>
+            </mdb-card>
+        </div>
+    </div>
+</section>
