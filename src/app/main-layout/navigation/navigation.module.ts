@@ -13,7 +13,7 @@ import { NavigationComponent } from './navigation.component';
     MDBBootstrapModule.forRoot(),
   ],
   declarations: [
-    NavigationComponent,
+    NavigationComponent, 
   ],
   exports: [
     NavigationComponent

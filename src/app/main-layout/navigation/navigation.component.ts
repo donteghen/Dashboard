@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 
 @Component({
@@ -11,7 +13,7 @@ export class NavigationComponent implements OnInit {
 
   clicked: boolean;
 
-  constructor() {
+  constructor(public auth: AuthService, @Inject(DOCUMENT) private doc: Document) {
     this.clicked = this.clicked === undefined ? false : true;
   }
 
@@ -21,5 +23,12 @@ export class NavigationComponent implements OnInit {
   setClicked(val: boolean): void {
     this.clicked = val;
   }
+  loginWithRedirect(){
+    this.auth.loginWithRedirect();
+  }
+  
 
+  logout():void {
+    this.auth.logout({returnTo:this.doc.location.origin});
+  }
 }

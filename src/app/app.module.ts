@@ -22,39 +22,49 @@ import { NavigationModule } from './main-layout/navigation/navigation.module';
 import { CommonModule } from '@angular/common';
 import { ProfileDetailComponent } from './views/profile-detail/profile-detail.component';
 
+// Authentication setting
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
+import { WelcomeComponent } from './views/welcome/welcome.component';
+import { UserProfileComponent } from './views/user-profile/user-profile.component';
+import { AuthGuard } from '@auth0/auth0-angular';
 
 const routes: Route[] = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
-  { path: 'dashboards', children:
+  
+  { path: '', pathMatch: 'full', redirectTo: 'welcome' },
+  { path: 'dashboards', canActivateChild:[AuthGuard], children:
     [
       { path: 'v1', component: Dashboard1Component },
     ]
   },
-  { path: 'profiles', children:
+  { path: 'profiles', canActivateChild:[AuthGuard], children:
     [
       { path: 'profile1', pathMatch:'full', component: Profile1Component },
       { path: 'profile1/:id', component: ProfileDetailComponent}
     ]
   },
-  { path: 'tables', children:
+  { path: 'tables', canActivateChild:[AuthGuard], children:
     [
       { path: 'table1', component: BasicTableComponent },
     ]
   },
-  { path: 'maps', children:
+  { path: 'maps', canActivateChild:[AuthGuard], children:
     [
       { path: 'map1', component: Map1Component},
     ]
   },
 
   { path: 'modals', component: ModalsComponent},
+  {path:'welcome', component:WelcomeComponent},
+  {path:'userprofile', canActivate:[AuthGuard], component:UserProfileComponent},
   { path: '**', component: NotFoundComponent },
+  
 
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -69,10 +79,12 @@ const routes: Route[] = [
     ViewsModule,
     ErrorModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule.forRoot({...env.auth})
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
+
 })
 export class AppModule { }

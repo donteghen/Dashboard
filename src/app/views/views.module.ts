@@ -19,6 +19,8 @@ import { Dashboard1Component } from './dashboards/dashboard1/dashboard1.componen
 import { Profile1Component } from './profile/profile1/profile1.component';
 import { HelpComponent } from './help/help.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 
@@ -47,6 +49,8 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
     Profile1Component,
     HelpComponent,
     ProfileDetailComponent,
+    UserProfileComponent,
+    WelcomeComponent,
    
 
   ],
@@ -58,7 +62,9 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
     StatsCardComponent,
     StatsCard2Component,    
     Dashboard1Component,
-    ProfileDetailComponent
+    ProfileDetailComponent,
+    UserProfileComponent,
+    WelcomeComponent,
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })
