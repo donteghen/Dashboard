@@ -11,4 +11,5 @@ export interface Project{
     changeability_index:number,
     transferability_index :number,
     technical_size:number,
+    
 }
